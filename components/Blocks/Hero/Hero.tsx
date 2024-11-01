@@ -2,12 +2,15 @@ import ButtonBorderMagic from "@/components/ui/ButtonBorderMagic";
 import { GridBg } from "@/components/ui/GridBg";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import React from "react";
+import React, { useState } from "react";
 import { HiCursorClick } from "react-icons/hi";
 
 const Hero = () => {
   return (
-    <div className="relative flex w-[100%] flex-col justify-center p-10">
+    <div
+      id="header"
+      className="ssm:p-10 relative flex min-h-[100vh] w-[100%] flex-col justify-center p-5"
+    >
       <Spotlight
         className="h=[100vh] left-[15%] top-[20%] w-[40vw]"
         fill="blue"
@@ -17,7 +20,7 @@ const Hero = () => {
 
       <GridBg />
 
-      <section className="relative z-[20] mt-20 flex flex-col items-center gap-4">
+      <section className="relative z-[20] flex flex-col items-center gap-4">
         <h4 className="text-center uppercase tracking-widest text-black-100">
           Dynamic Web Magic with Next.js
         </h4>
@@ -25,11 +28,11 @@ const Hero = () => {
           <TextGenerateEffect
             filter={false}
             duration={2}
-            className="max-w-[500px] text-center text-6xl font-bold"
+            className="max-w-[500px] text-center text-5xl font-bold"
             words="Portfolio with some dope animation"
           />
         </h1>
-        <p className="text-xl text-black-100">
+        <p className="text-center text-xl text-black-100">
           Hi! It's my first project with Framer-motion library!
         </p>
         <ButtonBorderMagic icon={<HiCursorClick />}>

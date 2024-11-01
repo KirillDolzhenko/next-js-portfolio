@@ -4,7 +4,7 @@ import React from "react";
 
 const Grid = () => {
   return (
-    <section className="relative z-0">
+    <section id="about" className="relative z-0 pt-[10px]">
       <BentoGrid items={gridItems} />
     </section>
   );

@@ -37,7 +37,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={`${wordsArray.length - 1 === idx ? "dark:text-purple-200" : "dark:text-white"} capitalize text-black opacity-0`}
+              className={`${wordsArray.length - 1 === idx ? "dark:text-purple-200" : "dark:text-white"} ssm:text-6xl capitalize text-black opacity-0`}
               style={{
                 filter: false ? "blur(10px)" : "none",
               }}

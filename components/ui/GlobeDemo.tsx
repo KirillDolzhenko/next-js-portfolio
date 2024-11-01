@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
+  // suspense: true,
 });
 
 export function GlobeDemo() {
@@ -27,9 +28,11 @@ export function GlobeDemo() {
     maxRings: 3,
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: true,
-    autoRotateSpeed: 0.5,
+    autoRotateSpeed: 0.1,
   };
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+
   const sampleArcs = [
     {
       order: 1,
@@ -393,36 +396,20 @@ export function GlobeDemo() {
     },
   ];
 
+  // const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+
   return (
-    <div className="absolute left-0 top-[0] flex w-full flex-row items-center justify-center bg-white py-20 dark:bg-black md:h-[400px] md:h-auto">
-      <div className="relative mx-auto h-full w-full max-w-7xl overflow-hidden px-4 md:h-[40rem]">
-        {/* <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-          <h2 className="text-center text-xl font-bold text-black dark:text-white md:text-4xl">
-            We sell soap worldwide
-          </h2>
-          <p className="mx-auto mt-2 max-w-md text-center text-base font-normal text-neutral-700 dark:text-neutral-200 md:text-lg">
-            This globe is interactive and customizable. Have fun with it, and
-            don&apos;t forget to share it. :)
-          </p>
-        </motion.div> */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-full w-full select-none bg-gradient-to-b from-transparent to-white dark:to-black" />
-        <div className="absolute -bottom-20 z-10 h-[10px] w-full md:h-full">
+    <div className="absolute left-0 top-0 flex h-[100%] min-h-[600px] w-full flex-row items-center justify-center bg-white py-20 dark:bg-black md:h-auto">
+      <div className="relative mx-auto h-full w-full max-w-7xl px-4 md:h-[40rem]">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-96 w-full select-none bg-gradient-to-b from-transparent to-white dark:to-black" />
+        <div className="absolute -top-10 left-0 z-10 h-auto min-h-[400px] w-full md:h-full">
+          {/* <Suspense fallback={<div>Loading...</div>}> */}
           <World data={sampleArcs} globeConfig={globeConfig} />
+          {/* </Suspense> */}
         </div>
       </div>
     </div>
   );
 }
+
+// export default GlobeDemo;
