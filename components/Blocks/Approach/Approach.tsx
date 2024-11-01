@@ -1,5 +1,5 @@
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { Card, Cards } from "@/components/ui/Cards";
+import { Card } from "@/components/ui/Cards";
 import { approachData } from "@/data";
 import React from "react";
 

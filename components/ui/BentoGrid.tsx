@@ -35,9 +35,9 @@ export const BentoGridItem = ({
   imgClassName = "",
   spareImg = "",
 }: IPropsBentoGridItem) => {
-  let [copied, setCopied] = useState<boolean>(false);
+  const [copied, setCopied] = useState<boolean>(false);
 
-  let handleClick = useCallback(() => {
+  const handleClick = useCallback(() => {
     if (!copied) {
       navigator.clipboard.writeText("manfeed3@gmail.com");
       setCopied(true);
@@ -121,15 +121,15 @@ export const BentoGridItem = ({
         {id === 3 && (
           <div className="pointer-events-none absolute -right-2 top-0 z-30 flex select-none gap-3 md:gap-4">
             <div className="text-4 md:text-5 flex flex-col gap-2 text-white md:gap-7">
-              {["", "React", "Nest.js", "Tailwind", "Docker"].map((el) => (
-                <span className="min-h-10 rounded bg-black-300/5 px-[20px] py-2 text-center opacity-20 small-sm:opacity-50 lg:opacity-100">
+              {["", "React", "Nest.js", "Tailwind", "Docker"].map((el, ind) => (
+                <span key={ind} className="min-h-10 rounded bg-black-300/5 px-[20px] py-2 text-center opacity-20 small-sm:opacity-50 lg:opacity-100">
                   {el}
                 </span>
               ))}
             </div>
             <div className="text-4 md:text-5 flex flex-col gap-2 pt-2 text-white md:gap-7">
-              {["Next.js", "SCSS", "MongoDB", "", ""].map((el) => (
-                <span className="min-h-10 rounded bg-black-300/5 px-[20px] py-2 text-center opacity-20 small-sm:opacity-50 lg:opacity-100">
+              {["Next.js", "SCSS", "MongoDB", "", ""].map((el, ind) => (
+                <span key={ind} className="min-h-10 rounded bg-black-300/5 px-[20px] py-2 text-center opacity-20 small-sm:opacity-50 lg:opacity-100">
                   {el}
                 </span>
               ))}

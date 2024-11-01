@@ -2,7 +2,7 @@ import ButtonGlow from "@/components/ui/ButtonGlow";
 import { GridBg } from "@/components/ui/GridBg";
 import { socialMedia } from "@/data";
 import React from "react";
-import { FaArrowRight, FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 function Footer() {
   return (

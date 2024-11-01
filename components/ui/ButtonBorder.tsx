@@ -8,9 +8,7 @@ function ButtonBorder({
   //   id: number;
   title,
   desc,
-  className,
   thumbnail,
-  ...otherProps
 }: {
   duration?: number;
   rx?: string;
@@ -19,6 +17,7 @@ function ButtonBorder({
   desc: string;
   className: string;
   thumbnail: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }) {
   return (

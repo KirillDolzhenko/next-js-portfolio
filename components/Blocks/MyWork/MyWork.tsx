@@ -10,8 +10,9 @@ function MyWork() {
       </h4>
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-2 grid-rows-2 flex-wrap gap-x-[40px] gap-y-[30px] md:grid-cols-4">
-          {workExperience.map((el) => (
+          {workExperience.map((el, ind) => (
             <ButtonBorder
+              key={ind}
               {...el}
               duration={Math.random() * 10000 + 30000}
             ></ButtonBorder>

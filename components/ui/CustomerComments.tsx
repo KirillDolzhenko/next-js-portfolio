@@ -85,14 +85,14 @@ export const CustomerComments = ({
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item, ind) => (
           <li
+            key={ind}
             className="relative flex w-[350px] max-w-full flex-shrink-0 items-center justify-center rounded-3xl border-[2px] border-slate-700/20 p-10 md:w-[600px]"
             style={{
               background:
                 "linear-gradient(180deg, #000319, rgba(128, 0, 128, 0.1)",
             }}
-            key={item.name}
           >
             <blockquote>
               <div

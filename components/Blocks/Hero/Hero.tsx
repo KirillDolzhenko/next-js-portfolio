@@ -2,7 +2,6 @@ import ButtonBorderMagic from "@/components/ui/ButtonBorderMagic";
 import { GridBg } from "@/components/ui/GridBg";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import React, { useState } from "react";
 import { HiCursorClick } from "react-icons/hi";
 
 const Hero = () => {

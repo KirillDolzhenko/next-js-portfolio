@@ -1,6 +1,5 @@
 import { CustomerComments } from "@/components/ui/CustomerComments";
 import { companies, testimonials } from "@/data";
-import { div, image } from "framer-motion/client";
 import React from "react";
 
 const KindWords = () => {
@@ -11,8 +10,11 @@ const KindWords = () => {
       </h4>
       <CustomerComments items={testimonials}></CustomerComments>
       <div className="mx-auto flex max-w-screen-lg flex-col flex-wrap items-center justify-between gap-7 small-sm:flex-row">
-        {companies.map((el) => (
-          <div className="mx-auto flex items-center justify-center gap-2">
+        {companies.map((el, ind) => (
+          <div
+            key={ind}
+            className="mx-auto flex items-center justify-center gap-2"
+          >
             <img src={el.img} alt={el.name} />
 
             <img src={el.nameImg} alt={el.name} />

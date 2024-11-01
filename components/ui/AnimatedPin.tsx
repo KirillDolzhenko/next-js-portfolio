@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { PinContainer } from "./3d-pin";
-import { desc } from "framer-motion/client";
-import Image from "next/image";
-import { FaArrowLeft, FaArrowPointer } from "react-icons/fa6";
+import { FaArrowPointer } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 
 export function AnimatedPinDemo({
