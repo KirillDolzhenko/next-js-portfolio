@@ -96,6 +96,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        appearing: {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
         spotlight: {
           "0%": {
             opacity: "0",
@@ -154,6 +162,7 @@ const config = {
         },
       },
       animation: {
+        appearing: "appearing 2s ease-out 1",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",

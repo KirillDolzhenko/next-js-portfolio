@@ -1,3 +1,1 @@
-## My First Next.js project
-
-It is still in development!
+## My First Next.js project with Acernity UI

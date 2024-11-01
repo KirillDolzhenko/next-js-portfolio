@@ -20,7 +20,7 @@ const Hero = () => {
       <GridBg />
 
       <section className="relative z-[20] flex flex-col items-center gap-4">
-        <h4 className="text-center uppercase tracking-widest text-black-100">
+        <h4 className="animate-appearing text-center uppercase tracking-widest text-black-100">
           Dynamic Web Magic with Next.js
         </h4>
         <h1>
@@ -31,7 +31,7 @@ const Hero = () => {
             words="Portfolio with some dope animation"
           />
         </h1>
-        <p className="text-center text-xl text-black-100">
+        <p className="animate-appearing text-center text-xl text-black-100">
           Hi! It's my first project with Framer-motion library!
         </p>
         <ButtonBorderMagic icon={<HiCursorClick />}>
